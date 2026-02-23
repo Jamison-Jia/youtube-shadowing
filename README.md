@@ -170,3 +170,47 @@ If you find this project helpful, remember to ⭐ star the repository to show yo
 ---
 
 ### Happy Shadowing! 🎤📺
+
+## Python config
+* Install Python
+https://www.python.org/downloads/windows/
+  ```powershell
+  python -m venv .venv
+  .venv\Scripts\activate
+
+  ```
+  确认版本
+  ```powershell
+  python --version
+  # Python 3.10.x
+  ```
+* 安装 PyTorch（CPU 版即可）
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
+
+
+  验证：
+
+  ```powershell
+  python -c "import torch; print(torch.__version__)"
+  ```
+* Install Whisper
+  ```powershell
+  pip install -U openai-whisper
+  ```
+  验证
+  ```powershell
+  python -c "import whisper; print('ok')"
+  ```
+
+## Extract srt from local media
+### Default calling
+  * Name the media file to ```video.mp4```
+  * Use the CLI to call the script by ```Python local_media_to_srt.py```
+### Explit convert arguments
+  
+  ```
+  python local_media_to_srt.py "D:\videos\english.mp4" \
+    --model small \
+    --max_words 10 \
+    --out "D:\videos\english.srt"
+  ```

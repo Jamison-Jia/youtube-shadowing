@@ -4,3 +4,5 @@ shadowing.exe
 demo.mp4
 _test*.py
 dist/
+.venv/
+.aider*
