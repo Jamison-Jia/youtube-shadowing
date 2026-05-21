@@ -1,0 +1,1 @@
+yt-dlp  --js-runtimes deno --remote-components ejs:github --cookies "cookies.txt" -f "bv*+ba/b" --playlist-items 1 "https://www.youtube.com/watch?v=hUkAiTX7v28&list=RDhUkAiTX7v28&start_radio=1"
